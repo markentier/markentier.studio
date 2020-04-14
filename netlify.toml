@@ -4,3 +4,82 @@ base = ""
 publish = "public"
 command = "echo 'Nothing to build, it is a very static site'"
 # functions = ".functions"
+
+[[headers]]
+for = "/*"
+[headers.values]
+content-security-policy = "base-uri 'self'; default-src 'self'; script-src 'self' *.cloudfront.net; style-src 'self'  *.cloudfront.net; img-src 'self' data: *.cloudfront.net *.gravatar.com; font-src 'self' *.cloudfront.net; connect-src 'self' *.cloudfront.net; media-src 'self' *.cloudfront.net; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'self' www.youtube-nocookie.com www.youtube.com player.vimeo.com; upgrade-insecure-requests; block-all-mixed-content; report-uri https://markentiertech.report-uri.com/r/d/csp/enforce; report-to default"
+report-to = """{"group":"default","max_age":31536000,"endpoints":[{"url":"https://markentiertech.report-uri.com/a/d/g"}],"include_subdomains":true}"""
+feature-policy = "layout-animations 'none'; oversized-images 'none'; sync-script 'none'; sync-xhr 'none'; unsized-media 'none'; autoplay 'none'; microphone 'none'; camera 'none'; geolocation 'none'; payment 'none'; usb 'none';"
+referrer-policy = "strict-origin-when-cross-origin"
+expect-ct = "max-age=0, report-uri=https://markentiertech.report-uri.com/r/d/ct/reportOnly"
+x-content-type-options = "nosniff"
+x-frame-options = "SAMEORIGIN"
+x-github-repo = "https://github.com/markentier/markentier.studio"
+x-github-user = "https://github.com/asaaki"
+x-xss-protection = "1; mode=block"
+
+# # entrypoint file
+# [[headers]]
+# for = "/index.html"
+# [headers.values]
+# cache-control = "max-age=3600"
+
+[[headers]]
+for = "/favicon.ico"
+[headers.values]
+cache-control = "max-age=15552000"
+
+[[headers]]
+for = "/*.svg"
+[headers.values]
+cache-control = "max-age=15552000"
+
+[[headers]]
+for = "/*.png"
+[headers.values]
+cache-control = "max-age=15552000"
+
+[[headers]]
+for = "/*.jpg"
+[headers.values]
+cache-control = "max-age=15552000"
+
+[[headers]]
+for = "/*.woff"
+[headers.values]
+cache-control = "max-age=15552000"
+content-type = "application/font-woff"
+access-control-allow-origin = "*"
+
+[[headers]]
+for = "/*.woff2"
+[headers.values]
+cache-control = "max-age=15552000"
+content-type = "font/woff2"
+access-control-allow-origin = "*"
+
+# REDIRECTS
+## https://docs.netlify.com/routing/redirects/
+[[redirects]]
+from = "/soundcloud"
+to = "https://soundcloud.com/asaaki"
+status = 200
+force = true
+
+[[redirects]]
+from = "/youtube"
+to = "https://www.youtube.com/channel/UClqkXZCX4xkbbYFfGgXZmbQ"
+status = 200
+force = true
+
+[[redirects]]
+from = "/tech"
+to = "https://markentier.tech/"
+status = 200
+force = true
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 404

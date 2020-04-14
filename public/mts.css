@@ -1,0 +1,59 @@
+/*! mts styles */
+@charset "UTF-8";
+@import url(sanitize.css);
+
+/* currently just copied from mtt */
+:root {
+  --ref-size: 20px;
+
+  --default-font: 'Lora', Cambria, Cochin, Georgia, 'Times New Roman', Times, serif;
+  --brand-font: 'Varela Round', Arial, sans-serif;
+  --code-font: 'Hack', 'Source Code Pro', 'Courier Std', 'Fira Mono', 'Inconsolata', Courier, monospace;
+
+  --text-color: #2f2d2c;
+  --bg-color: #efedec;
+
+  --head-light-color: #336688;
+  --head-color: #063656;
+  --head-dark-color: #031c2c;
+
+  --accent-color: #dfdddc;
+  --accent-dark-color: #bfbdbc;
+  --accent-darker-color:  #7f7d7c;
+
+  --link-color: var(--head-color);
+  --link-hl-color: #561606;
+
+  --rebecca: #663399;
+}
+
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent; /* prevent tap highlight color / shadow */
+  -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+  // -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+  // user-select: none; /* why would we want to do that? */
+}
+
+html, body, figure {
+  margin: 0; padding: 0; border: 0;
+}
+
+html, body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+  font-family: var(--default-font);
+  font-size: var(--ref-size);
+  line-height: 1.75rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-stroke: .45px rgba(0,0,0,.1);
+}
+
+body {
+  padding: 1rem;
+}
