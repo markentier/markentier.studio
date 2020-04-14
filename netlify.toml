@@ -64,19 +64,19 @@ access-control-allow-origin = "*"
 [[redirects]]
 from = "/soundcloud"
 to = "https://soundcloud.com/asaaki"
-status = 200
+status = 301
 force = true
 
 [[redirects]]
 from = "/youtube"
 to = "https://www.youtube.com/channel/UClqkXZCX4xkbbYFfGgXZmbQ"
-status = 200
+status = 301
 force = true
 
 [[redirects]]
 from = "/tech"
 to = "https://markentier.tech/"
-status = 200
+status = 301
 force = true
 
 [[redirects]]
