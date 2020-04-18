@@ -68,6 +68,12 @@ status = 301
 force = true
 
 [[redirects]]
+from = "/bandcamp"
+to = "https://markentier-studio.bandcamp.com/"
+status = 301
+force = true
+
+[[redirects]]
 from = "/youtube"
 to = "https://www.youtube.com/channel/UClqkXZCX4xkbbYFfGgXZmbQ"
 status = 301
