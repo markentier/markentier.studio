@@ -80,6 +80,12 @@ status = 301
 force = true
 
 [[redirects]]
+from = "/patreon"
+to = "https://www.patreon.com/asaaki"
+status = 301
+force = true
+
+[[redirects]]
 from = "/tech"
 to = "https://markentier.tech/"
 status = 301
